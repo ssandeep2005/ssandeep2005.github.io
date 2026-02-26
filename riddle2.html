@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riddle 2</title>
+<style>
+body{font-family:Arial;text-align:center;background:#fff3cd;padding:40px;}
+.container{background:white;padding:25px;border-radius:10px;}
+input,button{padding:10px;margin-top:10px;width:80%;max-width:300px;}
+button{background:#17a2b8;color:white;border:none;}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2>Riddle 2</h2>
+<p>I have keys but no locks. What am I?</p>
+<input type="text" id="answer">
+<br>
+<button onclick="checkAnswer()">Submit</button>
+</div>
+
+<script>
+function checkAnswer(){
+  var ans=document.getElementById("answer").value.toLowerCase();
+  if(ans==="keyboard"){
+    window.location="riddle3.html";
+  }else{
+    alert("Wrong answer! Try again.");
+  }
+}
+</script>
+
+</body>
+</html>
