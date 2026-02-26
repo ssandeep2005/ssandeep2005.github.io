@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final Riddle</title>
+<style>
+body{font-family:Arial;text-align:center;background:#c3f7c3;padding:40px;}
+.container{background:white;padding:25px;border-radius:10px;}
+input,button{padding:10px;margin-top:10px;width:80%;max-width:300px;}
+button{background:#28a745;color:white;border:none;}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2>Final Riddle</h2>
+<p>I am always in front of you but can’t be seen. What am I?</p>
+<input type="text" id="answer">
+<br>
+<button onclick="checkAnswer()">Submit</button>
+</div>
+
+<script>
+function checkAnswer(){
+  var ans=document.getElementById("answer").value.toLowerCase();
+  if(ans==="future"){
+    alert("Congratulations! You completed the Riddle Challenge!");
+    window.location="index.html";
+  }else{
+    alert("Wrong answer! Try again.");
+  }
+}
+</script>
+
+</body>
+</html>
