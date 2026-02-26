@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riddle 7</title>
+<style>
+body{font-family:Arial;text-align:center;background:#fff;padding:40px;}
+.container{background:#f1f1f1;padding:25px;border-radius:10px;}
+input,button{padding:10px;margin-top:10px;width:80%;max-width:300px;}
+button{background:#343a40;color:white;border:none;}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2>Riddle 7</h2>
+<p>I have cities but no houses, rivers but no water. What am I?</p>
+<input type="text" id="answer">
+<br>
+<button onclick="checkAnswer()">Submit</button>
+</div>
+
+<script>
+function checkAnswer(){
+  var ans=document.getElementById("answer").value.toLowerCase();
+  if(ans==="map"){
+    window.location="riddle8.html";
+  }else{
+    alert("Wrong answer! Try again.");
+  }
+}
+</script>
+
+</body>
+</html>
