@@ -1,0 +1,25 @@
+/* css/shop.css */
+
+.shop-header { padding: 60px 2%; background-color: var(--color-white); border-bottom: 1px solid var(--color-border); }
+.container.shop-layout { max-width: 96%; width: 100%; display: grid; grid-template-columns: 280px 1fr; gap: 50px; padding: 60px 0; align-items: start; }
+
+.shop-sidebar { position: sticky; top: 100px; background: var(--color-white); padding: 30px; border: 1px solid var(--color-border); }
+.filter-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; padding-bottom: 15px; border-bottom: 1px solid var(--color-border); }
+.clear-btn { background: none; border: none; color: var(--color-gray); text-decoration: underline; cursor: pointer; font-size: 0.8rem; font-family: var(--font-body); }
+.clear-btn:hover { color: var(--color-black); }
+.filter-group { margin-bottom: 30px; }
+.filter-group h4 { margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+.search-box { position: relative; display: flex; align-items: center; }
+.search-box input { width: 100%; padding: 10px 35px 10px 10px; border: 1px solid var(--color-border); font-family: var(--font-body); outline: none; }
+.search-box i { position: absolute; right: 10px; color: var(--color-gray); }
+
+.checkbox-list { display: flex; flex-direction: column; gap: 10px; }
+.checkbox-item { display: flex; align-items: center; gap: 10px; cursor: pointer; color: var(--text-muted); font-size: 0.9rem;}
+.checkbox-item input { accent-color: var(--color-black); cursor: pointer; }
+.checkbox-item:hover { color: var(--color-black); }
+
+.shop-topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; padding-bottom: 15px; border-bottom: 1px solid var(--color-border); }
+.sort-box select { padding: 8px 15px; border: 1px solid var(--color-border); font-family: var(--font-body); outline: none; background: var(--color-white); cursor: pointer; margin-left: 10px; }
+
+.shop-main .product-grid { grid-template-columns: repeat(4, 1fr); gap: 30px; }

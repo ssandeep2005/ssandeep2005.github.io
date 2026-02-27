@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | UrbanGifts</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <button class="hamburger" id="hamburger-menu"><i class="ph ph-list"></i></button>
+            <a href="index.html" class="brand-logo">URBANGIFTS</a>
+            <nav class="nav-links">
+                <ul id="nav-list">
+                    <li><a href="shop.html?category=all">Shop All</a></li>
+                    <li><a href="shop.html?category=Spiritual">Spiritual</a></li>
+                    <li><a href="shop.html?category=Home%20Decor">Home Decor</a></li>
+                    <li><a href="shop.html?category=Hampers">Hampers</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <a href="login.html" aria-label="Profile"><i class="ph ph-user"></i></a>
+                <a href="wishlist.html" aria-label="Wishlist"><i class="ph ph-heart"></i></a>
+                <a href="cart.html" class="cart-icon" aria-label="Cart">
+                    <i class="ph ph-shopping-bag"></i>
+                    <span class="cart-badge" id="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="breadcrumb container">
+            <a href="index.html">Home</a> / 
+            <a href="shop.html" id="bread-category">Shop</a> / 
+            <span id="bread-current" class="current">Product</span>
+        </div>
+
+        <section class="product-single">
+            <div class="container product-layout" id="product-container">
+                
+                <div class="product-gallery">
+                    <div class="main-image-box image-zoom-container">
+                        <img src="" id="main-product-img" class="zoom-img" alt="Product Image">
+                    </div>
+                    <div class="thumbnail-row" id="thumbnail-container">
+                        </div>
+                </div>
+
+                <div class="product-info-panel">
+                    <h1 id="prod-title" class="prod-title">Loading...</h1>
+                    
+                    <div class="prod-meta">
+                        <div class="rating">
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-fill ph-star"></i>
+                            <i class="ph-half ph-star"></i>
+                            <span id="prod-rating">(0 Reviews)</span>
+                        </div>
+                        <span class="stock-status" id="prod-stock">In Stock</span>
+                    </div>
+
+                    <p id="prod-price" class="prod-price">₹0</p>
+                    <p id="prod-desc" class="prod-desc">Loading description...</p>
+
+                    <div class="prod-attributes">
+                        <p><strong>Material:</strong> <span id="prod-material">Marble</span></p>
+                    </div>
+
+                    <div class="action-area">
+                        <div class="quantity-selector">
+                            <button class="qty-btn" id="qty-minus"><i class="ph ph-minus"></i></button>
+                            <input type="number" id="qty-input" value="1" min="1" max="10" readonly>
+                            <button class="qty-btn" id="qty-plus"><i class="ph ph-plus"></i></button>
+                        </div>
+                        
+                        <div class="buttons-group">
+                            <button id="add-to-cart-main" class="btn btn-primary btn-large flex-grow">Add to Cart</button>
+                            <button id="wishlist-main" class="btn btn-secondary wishlist-large" aria-label="Add to Wishlist">
+                                <i class="ph ph-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-header">Product Details <i class="ph ph-caret-down"></i></button>
+                            <div class="accordion-content">
+                                <p>All our products are masterfully handcrafted. Slight variations in texture and color are proof of authentic artisanal work, adding to the unique charm of every piece.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-header">Shipping & Returns <i class="ph ph-caret-down"></i></button>
+                            <div class="accordion-content">
+                                <p>We offer secure, damage-proof packaging. Free shipping on orders above ₹5000. Easy 7-day returns for damaged or defective items.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container text-center" id="product-error" style="display: none; padding: 100px 0;">
+                <h2>Product Not Found</h2>
+                <p>The product you are looking for does not exist or has been removed.</p>
+                <a href="shop.html" class="btn btn-primary" style="margin-top: 20px;">Return to Shop</a>
+            </div>
+        </section>
+
+        <section class="section bg-beige related-products" id="related-section" style="display: none;">
+            <div class="container">
+                <h2 class="section-title">You May Also Like</h2>
+                <div class="product-grid" id="related-grid">
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-info">
+                <h3>URBANGIFTS</h3>
+                <p>Curating the finest handcrafted decor and premium gifts for those with impeccable taste.</p>
+                <div class="social-links">
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="#"><i class="ph ph-pinterest-logo"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#">Marble Temples</a></li>
+                    <li><a href="#">Divine Idols</a></li>
+                    <li><a href="#">Home Decor</a></li>
+                    <li><a href="#">Corporate Hampers</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 UrbanGifts. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>

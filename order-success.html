@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Placed Successfully | UrbanGifts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body class="bg-beige" style="display: flex; align-items: center; justify-content: center; height: 100vh;">
+
+    <div class="container text-center" style="background: white; padding: 60px; max-width: 600px; border: 1px solid var(--color-border); box-shadow: 0 20px 40px rgba(0,0,0,0.05);">
+        <div style="width: 80px; height: 80px; background: rgba(212, 175, 55, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px;">
+            <i class="ph-fill ph-check-circle" style="font-size: 3rem; color: var(--color-gold);"></i>
+        </div>
+        
+        <h1 style="font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: 15px;">Order Confirmed</h1>
+        <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 10px;">Thank you for your purchase.</p>
+        <p style="color: var(--text-muted); margin-bottom: 40px; font-size: 0.9rem;">Your order number is <strong style="color: var(--color-black);">#URB-${Math.floor(Math.random() * 90000) + 10000}</strong>. We'll email you an order confirmation with details and tracking info.</p>
+        
+        <a href="shop.html" class="btn btn-primary btn-large">Continue Shopping</a>
+    </div>
+
+</body>
+</html>

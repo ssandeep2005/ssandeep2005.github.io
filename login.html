@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | UrbanGifts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+    <header class="navbar" style="padding: 15px 0;">
+        <div class="container text-center">
+            <a href="index.html" class="brand-logo" style="font-size: 2rem;">URBANGIFTS</a>
+        </div>
+    </header>
+
+    <main class="auth-main">
+        <div class="auth-container">
+            <h1>Welcome Back</h1>
+            <p>Enter your details to access your account.</p>
+            
+            <form id="login-form" class="auth-form">
+                <div>
+                    <label>Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                
+                <div class="auth-links">
+                    <label style="display: flex; align-items: center; gap: 8px; font-size: 0.8rem; text-transform: none;">
+                        <input type="checkbox" style="width: 15px; padding: 0;"> Remember me
+                    </label>
+                    <a href="#">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="padding: 15px; font-size: 1.1rem; margin-top: 10px;">Sign In</button>
+            </form>
+
+            <div class="auth-footer">
+                Don't have an account? <a href="signup.html">Create one</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/utils.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

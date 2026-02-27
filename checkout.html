@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Checkout | UrbanGifts</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/checkout.css"> <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="bg-beige">
+
+    <header class="navbar" style="padding: 15px 0;">
+        <div class="container text-center">
+            <a href="index.html" class="brand-logo" style="font-size: 2rem;">URBANGIFTS</a>
+            <p style="font-size: 0.8rem; color: var(--color-gray); letter-spacing: 2px; text-transform: uppercase; margin-top: 5px;">
+                <i class="ph ph-lock-key"></i> Secure Checkout
+            </p>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 50px 20px;">
+        <div class="checkout-layout">
+            
+            <div class="checkout-form-section">
+                <form id="checkout-form">
+                    
+                    <div class="form-group">
+                        <h2 class="form-title">Contact Information</h2>
+                        <input type="email" id="email" placeholder="Email Address" required>
+                        <input type="tel" id="phone" placeholder="Phone Number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <h2 class="form-title">Shipping Address</h2>
+                        <div class="form-row">
+                            <input type="text" id="fname" placeholder="First Name" required>
+                            <input type="text" id="lname" placeholder="Last Name" required>
+                        </div>
+                        <input type="text" id="address" placeholder="Complete Address (House No, Building, Street)" required>
+                        <input type="text" id="apartment" placeholder="Apartment, suite, etc. (optional)">
+                        <div class="form-row">
+                            <input type="text" id="city" placeholder="City" required>
+                            <input type="text" id="state" placeholder="State" required>
+                            <input type="text" id="pincode" placeholder="PIN Code" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <h2 class="form-title">Payment Method</h2>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 15px;">All transactions are secure and encrypted.</p>
+                        
+                        <div class="payment-options">
+                            <label class="payment-method">
+                                <input type="radio" name="payment" value="card" checked>
+                                <span class="method-details">
+                                    <span class="method-name">Credit / Debit Card</span>
+                                    <i class="ph ph-credit-card"></i>
+                                </span>
+                            </label>
+                            
+                            <div class="card-details-form" id="card-details-box">
+                                <input type="text" placeholder="Card Number" required>
+                                <div class="form-row">
+                                    <input type="text" placeholder="MM/YY" required>
+                                    <input type="text" placeholder="CVV" required>
+                                </div>
+                                <input type="text" placeholder="Name on Card" required>
+                            </div>
+
+                            <label class="payment-method">
+                                <input type="radio" name="payment" value="upi">
+                                <span class="method-details">
+                                    <span class="method-name">UPI (GPay, PhonePe, Paytm)</span>
+                                    <i class="ph ph-device-mobile"></i>
+                                </span>
+                            </label>
+
+                            <label class="payment-method">
+                                <input type="radio" name="payment" value="cod">
+                                <span class="method-details">
+                                    <span class="method-name">Cash on Delivery (COD)</span>
+                                    <i class="ph ph-money"></i>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-checkout" style="margin-top: 40px; font-size: 1.1rem; padding: 20px;">Place Order</button>
+                </form>
+            </div>
+
+            <aside class="checkout-summary">
+                <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px solid var(--color-border); padding-bottom: 10px;">Order Summary</h3>
+                
+                <div id="checkout-items" class="checkout-items-list">
+                    </div>
+
+                <div class="summary-row" style="margin-top: 20px;">
+                    <span>Subtotal</span>
+                    <span id="check-subtotal">₹0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span id="check-shipping">₹0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax (18%)</span>
+                    <span id="check-tax">₹0</span>
+                </div>
+                <div class="summary-row grand-total" style="border-top: 2px solid var(--color-black); margin-top: 20px; padding-top: 15px;">
+                    <span>Total</span>
+                    <span id="check-total" style="color: var(--color-gold);">₹0</span>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/checkout.js"></script> </body>
+</html>

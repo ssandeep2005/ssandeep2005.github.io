@@ -1,0 +1,146 @@
+/* css/responsive.css */
+
+/* =========================================
+   TABLET LAYOUT (Max Width: 992px)
+========================================= */
+@media (max-width: 992px) {
+    .product-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .category-grid, .process-grid { grid-template-columns: repeat(2, 1fr); }
+    .container.shop-layout { grid-template-columns: 220px 1fr; gap: 30px; }
+    .shop-main .product-grid { grid-template-columns: repeat(2, 1fr); }
+    
+    .product-layout, .cart-layout, .checkout-layout { grid-template-columns: 1fr; gap: 40px; }
+    .product-gallery, .cart-summary, .checkout-summary { position: relative; top: 0; }
+    .footer-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* =========================================
+   MOBILE LAYOUT (Max Width: 768px)
+========================================= */
+@media (max-width: 768px) {
+    
+    /* --- Spacing & Typography Fixes (Bada-Bada Issue Fixed) --- */
+    .section { padding: 50px 0; } /* Padding kam ki gayi */
+    .container { padding: 0 15px; }
+    .hero { height: 70vh; }
+    .hero-title { font-size: 2.2rem; margin-bottom: 15px; }
+    .hero-subtitle { font-size: 0.8rem; letter-spacing: 2px; }
+    .section-title { font-size: 1.8rem; margin-bottom: 25px; }
+    .btn-large { padding: 12px 25px; font-size: 0.9rem; }
+
+    /* --- Navbar & Mobile Menu Fix --- */
+    .nav-container { padding: 15px; }
+    .brand-logo { font-size: 1.3rem; letter-spacing: 1px; }
+    .nav-icons { gap: 12px; }
+    .nav-icons button, .nav-icons a { font-size: 1.3rem; }
+    
+    .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: var(--color-black);
+        z-index: 1001; /* Menu ke upar rakhne ke liye */
+    }
+
+    /* Proper Slide-in Mobile Menu */
+    .nav-links ul {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Hidden by default */
+        width: 260px;
+        height: 100vh;
+        background-color: var(--color-white);
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 90px 30px 30px; /* Space for close button */
+        gap: 25px;
+        transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        box-shadow: 5px 0 20px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .nav-links ul.show-menu {
+        left: 0; /* JS triggered */
+    }
+
+    .nav-links a { font-size: 1.1rem; }
+
+    /* --- Homepage Sections Fix --- */
+    .heritage-grid, .signature-grid { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+    .heritage-text, .signature-content { order: 2; }
+    .heritage-image, .signature-image { order: 1; }
+    
+    /* Image heights reduced for mobile */
+    .heritage-image img, .signature-image img { height: 280px; border-radius: 4px; }
+    .category-grid, .process-grid, .journal-grid { grid-template-columns: 1fr; gap: 20px; }
+    .category-card { height: 300px; }
+    
+    .process-card { padding: 25px 20px; }
+    .process-card i { font-size: 2.5rem; }
+    .process-card h3 { font-size: 1.1rem; }
+
+    /* --- Product Grid (2 Items per row perfectly scaled) --- */
+    .product-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+    .product-image-wrapper { margin-bottom: 10px; }
+    .product-info h3 { font-size: 0.85rem; margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .product-info p { font-size: 0.85rem; margin-bottom: 10px; }
+    
+    .add-to-cart-btn { padding: 8px; font-size: 0.7rem; }
+    .wishlist-btn { width: 30px; height: 30px; top: 10px; right: 10px; }
+    .wishlist-btn i { font-size: 1rem; }
+    .product-badge { padding: 3px 8px; font-size: 0.55rem; top: 10px; left: 10px; }
+
+    /* --- Instagram Feed --- */
+    .insta-grid { grid-template-columns: repeat(2, 1fr); }
+    .insta-grid img { height: 180px; }
+    .insta-grid img:last-child { display: none; } /* Keeps it perfectly square (4 images) */
+
+    /* --- Shop & Filter Page --- */
+    .shop-header { padding: 40px 15px; }
+    .shop-header h1 { font-size: 2.5rem; }
+    .container.shop-layout { grid-template-columns: 1fr; padding: 30px 0; gap: 30px; }
+    .shop-sidebar { padding: 20px; border: none; border-bottom: 1px solid var(--color-border); }
+
+    /* --- Single Product Page --- */
+    .main-image-box img { height: 350px; }
+    .thumb-box { width: 60px; height: 60px; }
+    .prod-title { font-size: 1.8rem; }
+    .prod-price { font-size: 1.5rem; }
+    .action-area { flex-direction: column; }
+    .buttons-group { width: 100%; }
+
+    /* --- Cart & Checkout Adjustments --- */
+    .cart-table-header { display: none; } /* Table header takes too much space on mobile */
+    .cart-item { grid-template-columns: 1fr; gap: 15px; padding: 20px 0; position: relative; }
+    .cart-item-details { gap: 15px; }
+    .cart-item-img { width: 75px; height: 100px; }
+    .cart-item-info h4 { font-size: 1rem; margin-bottom: 4px; }
+    .cart-item-total { position: absolute; bottom: 20px; right: 0; font-size: 1rem; }
+    
+    .cart-summary, .checkout-form-section, .checkout-summary { padding: 25px 20px; }
+    .promo-box input { padding: 10px; }
+    .promo-box button { padding: 0 15px; }
+
+    .form-row { grid-template-columns: 1fr; } /* Inputs stack fully on mobile */
+    .form-group .form-row:last-child { grid-template-columns: 1fr; }
+
+    /* --- Footer --- */
+    .footer { padding: 50px 0 20px; }
+    .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+    .social-links { justify-content: center; }
+}
+
+/* =========================================
+   SMALL MOBILE (Max Width: 480px)
+========================================= */
+@media (max-width: 480px) {
+    .hero-title { font-size: 2rem; }
+    .section-title { font-size: 1.5rem; }
+    .main-image-box img { height: 300px; }
+    .cart-item-img { width: 60px; height: 80px; }
+    .checkout-item { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .check-item-price { margin-left: 0; }
+}

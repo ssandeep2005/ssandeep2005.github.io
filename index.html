@@ -1,43 +1,264 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Riddle Game</title>
-<style>
-body{
-  font-family: Arial, sans-serif;
-  text-align:center;
-  background:#f4f4f4;
-  padding:40px;
-}
-.container{
-  background:white;
-  padding:30px;
-  border-radius:10px;
-  box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
-button{
-  padding:12px 25px;
-  font-size:16px;
-  border:none;
-  background:#007bff;
-  color:white;
-  border-radius:5px;
-  cursor:pointer;
-}
-button:hover{
-  background:#0056b3;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanGifts | Premium & Luxury Gifting</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
-<div class="container">
-  <h1>Welcome to the Riddle Challenge</h1>
-  <h3>Owner: Sandeep Singh</h3>
-  <p>This is a fun riddle game. Solve all 9 riddles correctly to complete the challenge. Good luck!</p>
-  <a href="riddle1.html"><button>Start Game</button></a>
-</div>
+    <div class="announcement-bar">
+        <p>Bespoke Marble Creations & Luxury Gifts. <a href="shop.html">Shop The Collection</a></p>
+        <button id="theme-toggle" aria-label="Toggle Dark Mode"><i class="ph ph-moon"></i></button>
+    </div>
 
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <button class="hamburger" id="hamburger-menu"><i class="ph ph-list"></i></button>
+            <a href="index.html" class="brand-logo">URBANGIFTS</a>
+            <nav class="nav-links">
+                <ul id="nav-list">
+                    <li><a href="shop.html?category=all" class="active">Shop All</a></li>
+                    <li><a href="shop.html?category=spiritual">Spiritual</a></li>
+                    <li><a href="shop.html?category=decor">Home Decor</a></li>
+                    <li><a href="shop.html?category=hampers">Hampers</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <button aria-label="Search"><i class="ph ph-magnifying-glass"></i></button>
+                <a href="login.html" aria-label="Profile"><i class="ph ph-user"></i></a>
+                <a href="wishlist.html" aria-label="Wishlist"><i class="ph ph-heart"></i></a>
+                <a href="cart.html" class="cart-icon" aria-label="Cart">
+                    <i class="ph ph-shopping-bag"></i>
+                    <span class="cart-badge" id="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero animate-on-scroll" style="background: url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;">
+            <div class="hero-overlay"></div>
+            <div class="hero-content fade-up delay-1">
+                <span class="hero-subtitle float-anim">The Art of Gifting</span>
+                <h1 class="hero-title reveal-text">Curated Luxury for <br> Every Occasion</h1>
+                <a href="shop.html" class="btn btn-primary btn-large fade-up delay-2">Explore Collection</a>
+            </div>
+        </section>
+
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <span>✦ HANDCRAFTED IN KISHANGARH</span>
+                <span>✦ PREMIUM MAKRANA MARBLE</span>
+                <span>✦ BESPOKE DESIGNS</span>
+                <span>✦ TIMELESS GIFTS</span>
+                <span>✦ DIVINE ARTISTRY</span>
+                <span>✦ HANDCRAFTED IN KISHANGARH</span>
+                <span>✦ PREMIUM MAKRANA MARBLE</span>
+                <span>✦ BESPOKE DESIGNS</span>
+                <span>✦ TIMELESS GIFTS</span>
+                <span>✦ DIVINE ARTISTRY</span>
+            </div>
+        </div>
+
+        <section class="section heritage-section bg-beige">
+            <div class="container heritage-grid">
+                <div class="heritage-text animate-on-scroll fade-right">
+                    <span class="hero-subtitle">Our Heritage</span>
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">Divine Artistry in Every Carving</h2>
+                    <p style="margin-bottom: 30px; color: var(--text-muted);">Sourced directly from the marble heartland of Kishangarh, our master artisans breathe life into solid stone. From intricately carved home temples to serene divine idols, every piece is a testament to generations of craftsmanship.</p>
+                    <a href="#" class="btn btn-secondary">Discover Our Story</a>
+                </div>
+                <div class="heritage-image animate-on-scroll fade-left image-zoom-container">
+                    <img src="https://unsplash.com/photos/a-mirror-and-a-vase-on-a-table-eWwKNgaY98w" alt="Marble Craftsmanship" class="zoom-img" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <section class="section process-section text-center">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll fade-up">The Mark of Excellence</h2>
+                <div class="process-grid animate-on-scroll stagger-grid">
+                    <div class="process-card">
+                        <i class="ph ph-sketch-logo float-anim"></i>
+                        <h3>Pure Makrana Marble</h3>
+                        <p>We use only the finest grade marble, known for its pristine white color and durability.</p>
+                    </div>
+                    <div class="process-card">
+                        <i class="ph ph-hand float-anim" style="animation-delay: 0.2s;"></i>
+                        <h3>Handcrafted Details</h3>
+                        <p>Meticulously hand-carved by skilled artisans carrying forward ancient traditions.</p>
+                    </div>
+                    <div class="process-card">
+                        <i class="ph ph-gift float-anim" style="animation-delay: 0.4s;"></i>
+                        <h3>Luxury Packaging</h3>
+                        <p>Delivered in premium, damage-proof packaging that feels like a celebration.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section featured-categories bg-beige">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll fade-up">Shop by Category</h2>
+                <div class="category-grid animate-on-scroll stagger-grid">
+                    <a href="shop.html?category=spiritual" class="category-card image-zoom-container">
+                        <img src="https://images.unsplash.com/photo-1582560468968-3e58b1f28b49?q=80&w=800&auto=format&fit=crop" alt="Divine Idols" class="zoom-img" loading="lazy">
+                        <div class="category-info"><h3>Divine Idols</h3></div>
+                    </a>
+                    <a href="shop.html?category=decor" class="category-card image-zoom-container">
+                        <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?q=80&w=800&auto=format&fit=crop" alt="Home Decor" class="zoom-img" loading="lazy">
+                        <div class="category-info"><h3>Premium Decor</h3></div>
+                    </a>
+                    <a href="shop.html?category=hampers" class="category-card image-zoom-container">
+                        <img src="https://images.unsplash.com/photo-1544967082-d9d25d867d66?q=80&w=800&auto=format&fit=crop" alt="Luxury Hampers" class="zoom-img" loading="lazy">
+                        <div class="category-info"><h3>Gift Hampers</h3></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section signature-piece">
+            <div class="container signature-grid">
+                <div class="signature-image animate-on-scroll fade-right image-zoom-container">
+                    <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?q=80&w=800&auto=format&fit=crop" alt="Marble Lotus Urli" class="zoom-img">
+                </div>
+                <div class="signature-content animate-on-scroll fade-left">
+                    <span class="hero-subtitle">The Masterpiece</span>
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 15px;">The Lotus Marble Urli</h2>
+                    <p style="margin-bottom: 25px; color: var(--text-muted);">A stunning focal point for any entrance. Carved from a single block of stone, featuring intricate lotus petal details and subtle gold accents. An unforgettable housewarming gift.</p>
+                    <a href="product.html?id=3" class="btn btn-primary">Shop This Piece</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="occasion-banner animate-on-scroll fade-in" style="background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1920&auto=format&fit=crop') center/cover fixed;">
+            <div class="occasion-content">
+                <h2 class="hero-title" style="font-size: 3rem;">Gifts That Speak Volumes</h2>
+                <div class="occasion-links">
+                    <a href="#" class="btn btn-primary">Wedding Gifts</a>
+                    <a href="#" class="btn btn-primary">Housewarming</a>
+                    <a href="#" class="btn btn-primary">Corporate</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section trending-now bg-beige">
+            <div class="container">
+                <div class="section-header animate-on-scroll fade-up">
+                    <h2 class="section-title" style="margin-bottom: 0;">Trending Now</h2>
+                    <a href="shop.html" class="view-all">View All <i class="ph ph-arrow-right"></i></a>
+                </div>
+                <div class="product-grid animate-on-scroll stagger-grid" id="bestseller-grid">
+                    </div>
+            </div>
+        </section>
+
+        <section class="section journal-section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll fade-up">The Gifting Journal</h2>
+                <div class="journal-grid animate-on-scroll stagger-grid">
+                    <article class="journal-card image-zoom-container">
+                        <div class="journal-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1590059530462-81781c039fb2?q=80&w=600&auto=format&fit=crop" class="zoom-img" alt="Marble Home Temple">
+                        </div>
+                        <div class="journal-content">
+                            <span class="date">Feb 20, 2026</span>
+                            <h3>How to Choose the Perfect Marble Idol for Your Home</h3>
+                            <a href="#" class="read-more">Read Article <i class="ph ph-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <article class="journal-card image-zoom-container">
+                        <div class="journal-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?q=80&w=600&auto=format&fit=crop" class="zoom-img" alt="Corporate Gifting">
+                        </div>
+                        <div class="journal-content">
+                            <span class="date">Feb 15, 2026</span>
+                            <h3>The Art of Corporate Gifting: Making an Impression</h3>
+                            <a href="#" class="read-more">Read Article <i class="ph ph-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section instagram-feed">
+            <h2 class="section-title text-center animate-on-scroll fade-up">@UrbanGifts in the wild</h2>
+            <div class="insta-grid animate-on-scroll stagger-grid">
+                <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?q=80&w=400&auto=format&fit=crop" alt="Insta 1">
+                <img src="https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?q=80&w=400&auto=format&fit=crop" alt="Insta 2">
+                <img src="https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?q=80&w=400&auto=format&fit=crop" alt="Insta 3">
+                <img src="https://images.unsplash.com/photo-1544967082-d9d25d867d66?q=80&w=400&auto=format&fit=crop" alt="Insta 4">
+                <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?q=80&w=400&auto=format&fit=crop" alt="Insta 5">
+            </div>
+        </section>
+
+        <section class="newsletter animate-on-scroll fade-up">
+            <div class="container text-center">
+                <i class="ph ph-envelope-simple-open newsletter-icon float-anim"></i>
+                <h2>Join the Inner Circle</h2>
+                <p>Subscribe to receive updates on new collections, exclusive offers, and gifting inspiration.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-info">
+                <h3>URBANGIFTS</h3>
+                <p>Curating the finest handcrafted decor and premium gifts for those with impeccable taste.</p>
+                <div class="social-links">
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="#"><i class="ph ph-pinterest-logo"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#">Marble Temples</a></li>
+                    <li><a href="#">Divine Idols</a></li>
+                    <li><a href="#">Home Decor</a></li>
+                    <li><a href="#">Corporate Hampers</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 UrbanGifts. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

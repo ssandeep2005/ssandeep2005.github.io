@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop The Collection | UrbanGifts</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/shop.css"> <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <button class="hamburger" id="hamburger-menu"><i class="ph ph-list"></i></button>
+            <a href="index.html" class="brand-logo">URBANGIFTS</a>
+            <nav class="nav-links">
+                <ul id="nav-list">
+                    <li><a href="shop.html" class="active">Shop All</a></li>
+                    <li><a href="shop.html?category=Spiritual%20Gifts">Spiritual</a></li>
+                    <li><a href="shop.html?category=Home%20Decor">Home Decor</a></li>
+                    <li><a href="shop.html?category=Hampers">Hampers</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <a href="login.html" aria-label="Profile"><i class="ph ph-user"></i></a>
+                <a href="wishlist.html" aria-label="Wishlist"><i class="ph ph-heart"></i></a>
+                <a href="cart.html" class="cart-icon" aria-label="Cart">
+                    <i class="ph ph-shopping-bag"></i>
+                    <span class="cart-badge" id="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="bg-beige">
+        <div class="shop-header text-center">
+            <div class="container">
+                <h1 class="hero-title" style="color: var(--color-black); margin-bottom: 10px; font-size: 3.5rem;">The Collection</h1>
+                <p style="color: var(--text-muted);">Explore our masterfully curated luxury pieces.</p>
+            </div>
+        </div>
+
+        <div class="container shop-layout">
+            
+            <aside class="shop-sidebar">
+                <div class="filter-header">
+                    <h3>Filter By</h3>
+                    <button id="clear-filters" class="clear-btn">Clear All</button>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Search</h4>
+                    <div class="search-box">
+                        <input type="text" id="search-input" placeholder="Search products...">
+                        <i class="ph ph-magnifying-glass"></i>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Categories</h4>
+                    <div class="checkbox-list" id="category-filters">
+                        </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Material</h4>
+                    <div class="checkbox-list" id="material-filters">
+                        </div>
+                </div>
+            </aside>
+
+            <section class="shop-main">
+                <div class="shop-topbar">
+                    <p id="product-count">Showing 0 results</p>
+                    <div class="sort-box">
+                        <label for="sort-select">Sort By:</label>
+                        <select id="sort-select">
+                            <option value="featured">Featured</option>
+                            <option value="newest">Newest Arrivals</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="product-grid" id="shop-product-grid">
+                    </div>
+
+                <div id="no-products-msg" class="text-center" style="display: none; padding: 50px 0;">
+                    <i class="ph ph-magnifying-glass" style="font-size: 3rem; color: var(--color-gray); margin-bottom: 20px; display: block;"></i>
+                    <h3>No products found</h3>
+                    <p>Try adjusting your filters or search term.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-info">
+                <h3>URBANGIFTS</h3>
+                <p>Curating the finest handcrafted decor and premium gifts for those with impeccable taste.</p>
+                <div class="social-links">
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="#"><i class="ph ph-pinterest-logo"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#">Marble Temples</a></li>
+                    <li><a href="#">Divine Idols</a></li>
+                    <li><a href="#">Home Decor</a></li>
+                    <li><a href="#">Corporate Hampers</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 UrbanGifts. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/shop.js"></script> </body>
+</html>

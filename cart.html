@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | UrbanGifts</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/cart.css"> <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="bg-beige">
+
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <button class="hamburger" id="hamburger-menu"><i class="ph ph-list"></i></button>
+            <a href="index.html" class="brand-logo">URBANGIFTS</a>
+            <nav class="nav-links">
+                <ul id="nav-list">
+                    <li><a href="shop.html?category=all">Shop All</a></li>
+                    <li><a href="shop.html?category=Spiritual">Spiritual</a></li>
+                    <li><a href="shop.html?category=Home%20Decor">Home Decor</a></li>
+                    <li><a href="shop.html?category=Hampers">Hampers</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <a href="login.html" aria-label="Profile"><i class="ph ph-user"></i></a>
+                <a href="wishlist.html" aria-label="Wishlist"><i class="ph ph-heart"></i></a>
+                <a href="cart.html" class="cart-icon" aria-label="Cart" style="color: var(--color-gold);">
+                    <i class="ph-fill ph-shopping-bag"></i>
+                    <span class="cart-badge" id="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main style="min-height: 70vh; padding: 60px 0;">
+        <div class="container">
+            <h1 class="hero-title" style="color: var(--color-black); margin-bottom: 40px; font-size: 3rem; text-align: center;">Your Cart</h1>
+
+            <div class="cart-layout" id="cart-content" style="display: none;">
+                
+                <div class="cart-items-section">
+                    <div class="cart-table-header">
+                        <span>Product</span>
+                        <span>Quantity</span>
+                        <span>Total</span>
+                    </div>
+                    <div id="cart-items-container">
+                        </div>
+                </div>
+
+                <aside class="cart-summary">
+                    <h3>Order Summary</h3>
+                    
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="summary-subtotal">₹0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Estimated Shipping</span>
+                        <span id="summary-shipping">₹0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax (18% GST)</span>
+                        <span id="summary-tax">₹0</span>
+                    </div>
+
+                    <div class="promo-box">
+                        <input type="text" id="promo-input" placeholder="Enter Promo Code">
+                        <button id="apply-promo-btn">Apply</button>
+                    </div>
+                    <p id="promo-message" style="font-size: 0.8rem; margin-top: 5px; display: none;"></p>
+
+                    <div class="summary-row grand-total">
+                        <span>Grand Total</span>
+                        <span id="summary-total">₹0</span>
+                    </div>
+
+                    <a href="checkout.html" class="btn-checkout">Proceed to Checkout</a>
+                    
+                    <div class="secure-checkout text-center" style="margin-top: 20px; font-size: 0.85rem; color: var(--color-gray);">
+                        <i class="ph ph-lock-key" style="margin-right: 5px;"></i> 100% Secure Checkout
+                    </div>
+                </aside>
+            </div>
+
+            <div id="cart-empty" class="text-center" style="display: none; padding: 50px 0;">
+                <i class="ph ph-shopping-cart" style="font-size: 4rem; color: var(--color-gray); margin-bottom: 20px; display: block;"></i>
+                <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Your cart is empty</h3>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">Looks like you haven't added any luxury items yet.</p>
+                <a href="shop.html" class="btn btn-primary">Continue Shopping</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-info">
+                <h3>URBANGIFTS</h3>
+                <p>Curating the finest handcrafted decor and premium gifts for those with impeccable taste.</p>
+                <div class="social-links">
+                    <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                    <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="#"><i class="ph ph-pinterest-logo"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#">Marble Temples</a></li>
+                    <li><a href="#">Divine Idols</a></li>
+                    <li><a href="#">Home Decor</a></li>
+                    <li><a href="#">Corporate Hampers</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 UrbanGifts. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+/* css/cart.css */
+
+.cart-layout {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr; /* Thoda aur space summary ke liye */
+    gap: 60px;
+    align-items: start;
+}
+
+/* --- Cart Items Section (Clean & Minimal) --- */
+.cart-items-section {
+    background: transparent;
+}
+
+.cart-table-header {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--color-black); /* Strong luxury baseline */
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--color-black);
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.cart-item-details {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.cart-item-img {
+    width: 100px;
+    height: 133px; /* Perfect 3:4 portrait ratio */
+    object-fit: cover;
+    background: var(--bg-secondary);
+}
+
+.cart-item-info h4 {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.cart-item-info h4 a { color: var(--color-black); }
+.cart-item-info h4 a:hover { color: var(--color-gold); }
+
+.cart-item-info p {
+    color: var(--color-gold);
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: var(--color-gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+.remove-btn:hover { color: var(--color-black); text-decoration: underline; }
+
+/* Quantity Controls in Cart */
+.cart-qty-ctrl {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-border);
+    width: max-content;
+    border-radius: 4px; /* Sleek rounding */
+    overflow: hidden;
+    background: var(--color-white);
+}
+
+.cart-qty-ctrl button {
+    background: transparent;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: var(--color-black);
+    font-size: 1rem;
+    transition: background var(--transition-fast);
+}
+.cart-qty-ctrl button:hover { background: var(--bg-secondary); }
+
+.cart-qty-ctrl input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    pointer-events: none;
+    background: transparent;
+}
+
+.cart-item-total {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--color-black);
+}
+
+/* --- Order Summary (Light & Elegant) --- */
+.cart-summary {
+    background: var(--color-white);
+    color: var(--color-black);
+    padding: 40px;
+    position: sticky;
+    top: 100px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03); /* Soft floating shadow */
+}
+
+.cart-summary h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 15px;
+    font-weight: 600;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+.summary-row span:last-child {
+    color: var(--color-black);
+    font-weight: 500;
+}
+
+.grand-total {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 2px solid var(--color-black);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--color-black);
+}
+.grand-total span:last-child {
+    color: var(--color-gold); /* Highlight total in gold */
+}
+
+/* --- PREMIUM CHECKOUT BUTTON --- */
+.btn-checkout {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    background-color: var(--color-gold);
+    color: var(--color-white);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-family: var(--font-body);
+    border: 1px solid var(--color-gold);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    margin-top: 30px;
+    font-size: 1rem;
+}
+.btn-checkout:hover {
+    background-color: var(--color-black);
+    border-color: var(--color-black);
+    color: var(--color-white);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Promo Box */
+.promo-box {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.promo-box input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid var(--color-border);
+    background: var(--color-white);
+    color: var(--color-black);
+    font-family: var(--font-body);
+    outline: none;
+    transition: border var(--transition-fast);
+}
+.promo-box input:focus { border-color: var(--color-black); }
+
+.promo-box button {
+    padding: 0 25px;
+    background: var(--color-black);
+    color: white;
+    border: 1px solid var(--color-black);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+.promo-box button:hover {
+    background: var(--color-gold);
+    border-color: var(--color-gold);
+}
